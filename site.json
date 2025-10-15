@@ -1,0 +1,11 @@
+
+{
+  "name": "L. Guillermo Woo-Mora",
+  "tagline": "Economics PhD candidate at PSE",
+  "email": "guillermo.woo-mora [at] psemail.eu",
+  "links": [
+    {"label": "Bluesky", "href": "https://bsky.app", "id": "bsky"},
+    {"label": "Twitter", "href": "https://twitter.com", "id": "twitter"},
+    {"label": "Scholar", "href": "https://scholar.google.com", "id": "scholar"}
+  ]
+}
