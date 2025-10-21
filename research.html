@@ -1,50 +1,69 @@
-
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Research — Your Name</title>
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-TnGpH7Q7bnO9xC74uZV3+VBgWcAhoQZZ6/2P9xCgh6GrwUPClN7Tz3dX9Sx6Vp2aWbbDPnMZpLz8+TJUjz3Q5A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+  <title>Research — Clémence Pougué Biyong</title>
+
+  <!-- Global styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Fonts: Playfair (name) + Source Sans (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<!-- ===== Header (matches index) ===== -->
 <header class="site-header large-header">
   <div class="container profile-layout">
     <div class="profile-photo">
-      <!-- Use the same photo as index (be careful with case!) -->
+      <!-- Keep the exact filename/case you use on index -->
       <img src="assets/img/Photo.jpeg" alt="Clémence Pougué Biyong">
     </div>
 
     <div class="profile-text">
+      <!-- Name styling handled in CSS (.profile-text h1) -->
       <h1>Clémence Pougué Biyong</h1>
 
+      <!-- Title + World Bank logo -->
+      <p class="tagline">
+        Economist
+        <!-- Ensure this file exists: assets/img/worldbank.png -->
+        <img src="assets/img/worldbank.png" alt="World Bank logo" class="org-logo">
+      </p>
 
-      <!-- Icon row: Email • LinkedIn • Scholar • CV -->
+      <!-- Icon row: Email • LinkedIn • Scholar • CV (inline SVG = ad-blocker proof) -->
       <div class="icon-row">
-        <a href="mailto:cpouguebiyong@worldbank.org" class="icon" title="Email">
-          <i class="fa-solid fa-envelope"></i>
+        <!-- Email -->
+        <a href="mailto:cpouguebiyong@worldbank.org" class="icon" title="Email" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11Zm2 .3v.3l8 5.2 8-5.2v-.3a.5.5 0 0 0-.5-.5h-15a.5.5 0 0 0-.5.5Zm16 2.1-7.4 4.8a1.5 1.5 0 0 1-1.6 0L3 8.9v8.6a.5.5 0 0 0 .5.5h15a.5.5 0 0 0 .5-.5V8.9Z"></path>
+          </svg>
         </a>
-        <a href="https://www.linkedin.com/in/cl%C3%A9mence-pougu%C3%A9-biyong-87492a155/?originalSubdomain=fr"
-           class="icon" title="LinkedIn" target="_blank" rel="noopener">
-          <i class="fa-brands fa-linkedin"></i>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/cl%C3%A9mence-pougu%C3%A9-biyong-87492a155" class="icon" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M4.98 3.5A2.48 2.48 0 1 1 2.5 1a2.48 2.48 0 0 1 2.48 2.5zM.5 8.5h4V23h-4zM8.5 8.5h3.8v2h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V23h-4z"></path>
+          </svg>
         </a>
-        <a href="https://scholar.google.com/citations?user=H5azOdEAAAAJ&hl=fr&oi=ao"
-           class="icon" title="Google Scholar" target="_blank" rel="noopener">
-          <i class="fa-solid fa-graduation-cap"></i>
-          <!-- Or use your own Scholar PNG:
-          <img src="assets/img/google-scholar.png" alt="Google Scholar"> -->
+
+        <!-- Google Scholar (mortarboard icon) -->
+        <a href="https://scholar.google.com/citations?user=H5azOdEAAAAJ&hl=fr" class="icon" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M12 3L1 8l11 5 9-4.09V17h2V8L12 3zm-1 14.5l-6.5-3V18L11 21l6.5-3v-3.5L11 17.5z"></path>
+          </svg>
         </a>
-        <a href="assets/cv/cv.pdf" class="icon" title="Download CV" target="_blank" rel="noopener">
-          <i class="fa-solid fa-file-lines"></i>
+
+        <!-- CV -->
+        <a href="assets/cv/cv.pdf" class="icon" title="Download CV (PDF)" aria-label="CV" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M6 2h8l4 4v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V7h3.5L14 3.5zM7 12h10v1.5H7V12zm0 3h10v1.5H7V15zm0-6h6v1.5H7V9z"></path>
+          </svg>
         </a>
       </div>
 
-      <!-- Page nav; mark Research as active -->
+      <!-- Page nav -->
       <nav class="nav">
         <a href="index.html">About</a>
         <a href="research.html" class="active">Research</a>
@@ -53,92 +72,64 @@
   </div>
 </header>
 
-
+<!-- ===== Main content ===== -->
 <main class="container content">
   <h2 id="publications">Publications</h2>
 
+  <!-- Example entry -->
   <article class="entry">
-    <h3><a href="#">Paper Title in Journal</a>. <span class="venue">European Economic Review (2025)</span></h3>
+    <h3>
+      <a href="#">Paper Title in Journal</a>
+      <span class="venue">— Journal Name (2025)</span>
+    </h3>
     <div class="media">
-      <img src="assets/img/sample1.jpg" alt="Sample image">
-      <p class="credit">Image credit: <a href="#">Source Name</a></p>
+      <img src="assets/img/sample1.jpg" alt="Paper image">
+      <p class="credit">Image credit: <a href="#">Source</a></p>
     </div>
     <h4>Abstract</h4>
     <blockquote>
-      <p>This paper investigates the immediate economic impacts of a policy, using a quasi-experimental setting and synthetic control estimates. Replace with your abstract.</p>
+      <p>Short abstract goes here. Replace with your own summary.</p>
     </blockquote>
-    <p class="links">[<a href="#">App</a>] [<a href="#">Replication</a>] [<a href="#">pdf</a>]</p>
-    <hr>
-  </article>
-
-  <article class="entry">
-    <h3><a href="#">Another Publication Title</a>. <span class="venue">Journal Name (2025)</span></h3>
-    <div class="media">
-      <img src="assets/img/sample2.jpg" alt="Sample image">
-      <p class="credit">Image credit: <a href="#">Archive or Photographer</a></p>
-    </div>
-    <h4>Abstract</h4>
-    <blockquote>
-      <p>We investigate historical persistence and contemporary outcomes using an RD design around historical boundaries. Replace with your abstract.</p>
-    </blockquote>
-    <p class="links">[<a href="#">Interactive map</a>] [<a href="#">Replication</a>] [<a href="#">pdf</a>]</p>
+    <p class="links">[<a href="#">App</a>] [<a href="#">Replication</a>] [<a href="#">PDF</a>]</p>
     <hr>
   </article>
 
   <h2 id="working-papers">Working Papers</h2>
 
   <article class="entry">
-    <h3><a href="#">Working Paper Title</a> with <a href="#">Coauthor A</a> and <a href="#">Coauthor B</a></h3>
+    <h3>
+      <a href="#">Working Paper Title</a>
+      <span class="venue">— with Co-authors</span>
+    </h3>
     <div class="media">
-      <img src="assets/img/sample3.jpg" alt="Sample image">
-      <p class="credit">Image credit: <a href="#">Photographer / Outlet</a></p>
+      <img src="assets/img/sample2.jpg" alt="Working paper image">
+      <p class="credit">Image credit: <a href="#">Photographer</a></p>
     </div>
     <h4>Abstract</h4>
     <blockquote>
-      <p>How does partisan alignment affect public health compliance? Replace with your abstract.</p>
+      <p>Short abstract or teaser for the working paper.</p>
     </blockquote>
-    <hr>
-  </article>
-
-  <article class="entry">
-    <h3><a href="#">Skin Tone Penalties: Bottom-up Discrimination in Football</a> with <a href="#">Coauthor</a></h3>
-    <div class="media">
-      <img src="assets/img/sample4.jpg" alt="Sample image">
-      <p class="credit">Image credit: <a href="#">IMAGO / Colorsport</a></p>
-    </div>
-    <h4>Abstract</h4>
-    <blockquote>
-      <p>This paper investigates colorism in men's football using machine-learning–based skin tone extraction and natural experiments. Replace with your abstract.</p>
-    </blockquote>
+    <p class="links">[<a href="#">PDF</a>] [<a href="#">Code</a>]</p>
     <hr>
   </article>
 
   <h2 id="wip">Work in Progress</h2>
-
   <article class="entry">
-    <h3>Project Title: Short descriptor</h3>
+    <h3>Project Title — Short descriptor</h3>
     <div class="media">
-      <img src="assets/img/sample5.jpg" alt="Sample image">
+      <img src="assets/img/sample3.jpg" alt="Project image">
     </div>
-    <blockquote><p>Draft coming soon!</p></blockquote>
-    <hr>
-  </article>
-
-  <h2>Resting Papers</h2>
-  <article class="entry">
-    <h3>Older Project Title</h3>
-    <div class="media">
-      <img src="assets/img/sample6.jpg" alt="Sample image">
-    </div>
-    <p class="credit">With Coauthor X and Coauthor Y</p>
+    <blockquote><p>Draft coming soon.</p></blockquote>
     <hr>
   </article>
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <small>Hosted on GitHub Pages — Theme inspired by <a href="https://github.com/orderedlist">orderedlist</a>.</small>
+    <small>Hosted on GitHub Pages — custom minimalist theme.</small>
   </div>
 </footer>
+
 </body>
 </html>
+
