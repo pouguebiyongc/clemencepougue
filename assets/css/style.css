@@ -37,3 +37,68 @@ hr{border:0;border-top:1px solid var(--border);margin:20px 0}
   .media{grid-template-columns:1fr}
   .identity{align-items:flex-start}
 }
+
+/* --- Larger profile header layout --- */
+.large-header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 60px 0;
+}
+
+.profile-layout {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profile-photo img {
+  width: 320px; /* adjust size here */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+.profile-text {
+  flex: 1;
+}
+
+.profile-text h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.profile-text .tagline {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.profile-text .email,
+.profile-text .meta {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.profile-text .bio {
+  margin-top: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Mobile view */
+@media (max-width: 700px) {
+  .profile-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-photo img {
+    width: 80%;
+    max-width: 260px;
+  }
+}
+
