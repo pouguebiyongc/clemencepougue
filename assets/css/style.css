@@ -102,3 +102,40 @@ hr{border:0;border-top:1px solid var(--border);margin:20px 0}
   }
 }
 
+/* --- Icon row under title --- */
+.icon-row{
+  display:flex;
+  gap:14px;
+  margin:8px 0 14px;
+}
+
+.icon-row .icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  border:1px solid var(--border);
+  border-radius:50%;
+  font-size:1.2rem;
+  text-decoration:none;
+  transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.icon-row .icon:hover{
+  transform:translateY(-1px);
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
+  background:#fafafa;
+}
+
+/* Brand-ish tints (subtle) */
+.icon.email   { color:#0366d6; }    /* blue */
+.icon.linkedin{ color:#0a66c2; }    /* LinkedIn */
+.icon.scholar { color:#333;   }     /* neutral */
+.icon.cv      { color:#111;   }     /* neutral */
+
+/* On mobile, keep them centered if header stacks */
+@media (max-width:700px){
+  .icon-row{ justify-content:center; }
+}
+
