@@ -18,8 +18,24 @@ a:hover{text-decoration:underline}
 .identity h1{margin:0;font-size:1.4rem}
 .identity .tagline,.identity .email,.identity .meta{margin:0;color:var(--muted);font-size:.95rem}
 .nav{margin-top:12px;display:flex;gap:14px;flex-wrap:wrap}
-.nav a{padding:6px 0;border-bottom:2px solid transparent}
-.nav a.active{border-color:var(--link);font-weight:600}
+.nav a {
+  padding: 6px 0;
+  color: var(--accent);             /* dark grey links */
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav a:hover {
+  color: #000;                      /* pure black on hover */
+  border-color: #999;               /* subtle underline */
+}
+
+.nav a.active {
+  color: #000;                      /* darker for active page */
+  border-color: #333;               /* subtle underline for active */
+  font-weight: 600;
+}
+
 .quicklinks{margin-top:10px;color:var(--muted);font-size:.95rem}
 .content{padding:24px 0}
 h2{margin-top:0}
@@ -121,40 +137,57 @@ body {
 }
 
 
-/* --- Icon row under title --- */
-.icon-row{
-  display:flex;
-  gap:14px;
-  margin:8px 0 14px;
+/* ================================
+   Harmonized dark grey icons
+   ================================ */
+
+.icon-row {
+  display: flex;
+  gap: 14px;
+  margin: 8px 0 14px;
 }
 
-.icon-row .icon{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:36px;
-  height:36px;
-  border:1px solid var(--border);
-  border-radius:50%;
-  font-size:1.2rem;
-  text-decoration:none;
-  transition:transform .12s ease, box-shadow .12s ease, background .12s ease;
+.icon-row .icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  text-decoration: none;
+  background-color: #fff;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
-.icon-row .icon:hover{
-  transform:translateY(-1px);
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
-  background:#fafafa;
+/* Font Awesome icons */
+.icon-row .icon i {
+  color: var(--accent);
 }
 
-/* Brand-ish tints (subtle) */
-.icon.email   { color:#0366d6; }    /* blue */
-.icon.linkedin{ color:#0a66c2; }    /* LinkedIn */
-.icon.scholar { color:#333;   }     /* neutral */
-.icon.cv      { color:#111;   }     /* neutral */
+/* Inline SVG icons */
+.icon-row .icon svg {
+  fill: var(--accent);
+  transition: fill 0.15s ease;
+}
 
-/* On mobile, keep them centered if header stacks */
+/* Hover effect: slightly darker grey */
+.icon-row .icon:hover {
+  transform: translateY(-1px);
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.icon-row .icon:hover i {
+  color: #000;
+}
+.icon-row .icon:hover svg {
+  fill: #000;
+}
+
+/* Center icons on mobile */
 @media (max-width:700px){
-  .icon-row{ justify-content:center; }
+  .icon-row { justify-content: center; }
 }
+
 
